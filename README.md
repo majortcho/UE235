@@ -6,7 +6,7 @@ UE 235 - Projet de base pour mini-projet
 L'environnement Docker a été généré à partir du site [https://phpdocker.io/generator](PHPDocker.io). Celui-ci vous fournit un ficher ***README*** présent dans le répertoire ***/phpdocker/*** afin de vous rappeler les commandes de base de Docker et Docker-compose, vous permettant de générer et lancer l'environnement nécessaire au projet Symfony.
 
 
-## Lancement du projet ##
+## Lancement du projet ##
 
 Une fois votre environnement Docker lancé, executez `composer` à la racine du projet, afin d'installer les dépendances définies dans le fichier `composer.json` et nécessaire au projet. Puis enfin, accédez au projet Symfony par l'intermédiaire de votre navigateur, en saisissant l'URL [http://localhost:1234](http://localhost:1234). 
 
@@ -30,6 +30,7 @@ Les **`Articles`** sont définis par les caractéristiques suivantes :
 Les **`Category`** sont définies par les caractéristiques suivantes : 
   * `id` : identifiant unique de la catégorie
   * `name` : nom de la catégorie
+
 
 
 ## URL des différentes pages ##
