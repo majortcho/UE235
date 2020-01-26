@@ -2,14 +2,19 @@ UE 235 - Projet de base pour mini-projet
 ==================================
 
 ### Gestion de l'environnement Docker ###
+
 L'environnement Docker a été généré à partir du site [https://phpdocker.io/generator](PHPDocker.io). Celui-ci vous fournit un ficher ***README*** présent dans le répertoire ***/phpdocker/*** afin de vous rappeler les commandes de base de Docker et Docker-compose, vous permettant de générer et lancer l'environnement nécessaire au projet Symfony.
 
+
 ### Lancement du projet ###
+
 Une fois votre environnement Docker lancé, executez `composer` à la racine du projet, afin d'installer les dépendances définies dans le fichier `composer.json` et nécessaire au projet. Puis enfin, accédez au projet Symfony par l'intermédiaire de votre navigateur, en saisissant l'URL [http://localhost:1234](http://localhost:1234). 
 
 *Pour les utilisateurs de Docker Toolbox, une précision a été apportée pour vous renseigner sur l'URL à saisir.*
 
+
 ### Présentation du projet ###
+
 Le projet proposé pose les bases d'une gestion de blog. Ce projet simpliste gère : 
   * des articles 
   * des catégories
@@ -26,7 +31,9 @@ Les **`Category`** sont définies par les caractéristiques suivantes :
   * `id` : identifiant unique de la catégorie
   * `name` : nom de la catégorie
 
+
 ### URL des différentes pages ###
+
   * [Page d'accueil](http://localhost:1234) -> redirection vers [http://localhost:1234](http://localhost:1234/article)
   * [Page de listing d'articles](http://localhost:1234/article)
   * Page de détails d'un article dont l'identifiant unique est **1** : [http://localhost:1234/article/1/](http://localhost:1234/article/1/)
@@ -36,3 +43,4 @@ Les **`Category`** sont définies par les caractéristiques suivantes :
   * Page de détails d'une catégorie dont l'identifiant unique est **1** : [http://localhost:1234/category/1/](http://localhost:1234/category/1/)
   * Page d'édition d'une catégorie dont l'identifiant unique est **1** : [http://localhost:1234/category/1/edit/](http://localhost:1234/category/1/edit/)
   * [Page d'ajout d'une categorie](http://localhost:1234/category/new/)
+
