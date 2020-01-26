@@ -32,8 +32,8 @@ Les **`Category`** sont définies par les caractéristiques suivantes :
   * `name` : nom de la catégorie
 
 
+## URL du projet ##
 
-## URL des différentes pages ##
 
   * [Page d'accueil](http://localhost:1234) -> redirection vers [http://localhost:1234](http://localhost:1234/article)
   * [Page de listing d'articles](http://localhost:1234/article)
