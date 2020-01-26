@@ -8,7 +8,14 @@ L'environnement Docker a été généré à partir du site [https://phpdocker.io
 
 ## Lancement du projet ##
 
-Une fois votre environnement Docker lancé, executez `composer` à la racine du projet, afin d'installer les dépendances définies dans le fichier `composer.json` et nécessaire au projet. Puis enfin, accédez au projet Symfony par l'intermédiaire de votre navigateur, en saisissant l'URL [http://localhost:1234](http://localhost:1234). 
+Une fois votre environnement Docker lancé, executez `composer` à la racine du projet, afin d'installer les dépendances définies dans le fichier `composer.json` et nécessaire au projet. 
+
+N'oubliez pas d'initialiser la base de donner et son contenu. Pour se faire, executer les commandes suivantes : 
+  * `php bin/console make:migration` : prépare la migration des données
+  * `php bin/console doctrine:migrations:migrate` : rend effectifs les modifications en base de données
+  * `php bin/console doctrine:fixtures:load` : injecte les *"fixtures"*, c'est à dire les données par défaut, en base de données
+
+Puis enfin, accédez au projet Symfony par l'intermédiaire de votre navigateur, en saisissant l'URL [http://localhost:1234](http://localhost:1234). 
 
 *Pour les utilisateurs de Docker Toolbox, une précision a été apportée pour vous renseigner sur l'URL à saisir.*
 
