@@ -5,7 +5,7 @@ UE 235 - Projet de base pour mini-projet
 
 Si votre projet tourne sur un environnement `LAMP` *"classique"*, assurez-vous que les éléments suivants sont correctement installés, disponibles et configurés sur votre container Docker :
   * votre VirtualHost Apache pointe bien sur le répertoire `public` de votre application 
-  * module *"rewrite"* activé sous Apache : `a2enmod rewrite && apache2 reload` 
+  * module *"rewrite"* activé sous Apache : `a2enmod rewrite && service apache2 reload` 
   * que le module "sqlite3" correspondant à votre version de PHP est bien installé. Par exemple pour une version PHP 7.4 : `apt update && apt install php7.4-sqlite3`
 
 
