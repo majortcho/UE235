@@ -1,23 +1,28 @@
 UE 235 - Projet de base pour mini-projet
 ==================================
 
-## Gestion de l'environnement Docker ##
+## Gestion de l'environnement ##
 
-L'environnement Docker a été généré à partir du site [https://phpdocker.io/generator](PHPDocker.io). Celui-ci vous fournit un ficher ***README*** présent dans le répertoire ***/phpdocker/*** afin de vous rappeler les commandes de base de Docker et Docker-compose, vous permettant de générer et lancer l'environnement nécessaire au projet Symfony.
+Si votre projet tourne sur un environnement `LAMP` *"classique"*, assurez-vous que les éléments suivants sont correctement installés, disponibles et configurés sur votre container Docker :
+  * votre VirtualHost Apache pointe bien sur le répertoire `public` de votre application 
+  * module *"rewrite"* activé sous Apache : `a2enmod rewrite && apache2 reload` 
+  * que le module "sqlite3" correspondant à votre version de PHP est bien installé. Par exemple pour une version PHP 7.4 : `apt update && apt install php7.4-sqlite3`
 
 
 ## Lancement du projet ##
 
-Une fois votre environnement Docker lancé, executez `composer` à la racine du projet, afin d'installer les dépendances définies dans le fichier `composer.json` et nécessaire au projet. 
+Pour les instructions suivantes, nous partirons du principe que votre port de connexion au projet est `1234`.
 
-N'oubliez pas d'initialiser la base de donner et son contenu. Pour se faire, executer les commandes suivantes : 
+Une fois votre environnement Docker lancé, executez `composer update` à la racine du projet, afin d'installer et/ou mettre à jour les dépendances définies dans le fichier `composer.json` et nécessaire au projet. 
+
+Si nécessaire, créez un fichier `.env.local` afin d'y renseigner vos paramètres locaux. Notons que ce fichier ne sera pas synchronisé avec votre dépôt GIT.
+
+N'oubliez pas d'initialiser la base de données et son contenu. Pour ce faire, executer les commandes suivantes : 
   * `php bin/console make:migration` : prépare la migration des données
   * `php bin/console doctrine:migrations:migrate` : rend effectifs les modifications en base de données
   * `php bin/console doctrine:fixtures:load` : injecte les *"fixtures"*, c'est à dire les données par défaut, en base de données
 
 Puis enfin, accédez au projet Symfony par l'intermédiaire de votre navigateur, en saisissant l'URL [http://localhost:1234](http://localhost:1234). 
-
-*Pour les utilisateurs de Docker Toolbox, une précision a été apportée pour vous renseigner sur l'URL à saisir.*
 
 
 ## Présentation du projet ##
@@ -40,7 +45,6 @@ Les **`Category`** sont définies par les caractéristiques suivantes :
 
 
 ## URL du projet ##
-
 
   * [Page d'accueil](http://localhost:1234) -> redirection vers [http://localhost:1234](http://localhost:1234/article)
   * [Page de listing d'articles](http://localhost:1234/article)
