@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello</h1>
+    <ul>
+        <li>lien1<code><a href="{{ 'https://fr.wikipedia.org/wiki/Wikipédia:Accueil_principal'|file_link(0) }}">wikipedia</a></code></li>
+        <li>lien2<code><a href="{{ 'https://translate.google.fr/?hl=fr'|file_link(0) }}">traduction</a></code></li>
+    </ul>
+</div>
+
+{% endblock %}
